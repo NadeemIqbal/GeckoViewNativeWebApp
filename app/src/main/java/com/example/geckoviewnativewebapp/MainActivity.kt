@@ -97,6 +97,7 @@ class MainActivity : Activity() {
         var port: WebExtension.Port? = null
         override fun onPortMessage(message: Any, port: WebExtension.Port) {
             Log.e(TAG, "onPortMessage: $port, $message")
+//            onPortMessage: org.mozilla.geckoview.WebExtension$Port@5c6de6e, {"functionName":"logoutCall","param":"logout"}
             Toast.makeText(this@MainActivity, message.toString(), Toast.LENGTH_SHORT).show()
         }
 

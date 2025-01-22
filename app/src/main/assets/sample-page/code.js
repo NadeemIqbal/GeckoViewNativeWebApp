@@ -1,7 +1,9 @@
 console.log("Hello from the sample code!");
 
 function sendMessageToNative(eventName, message) {
-    window.JSBridge.postMessage(eventName, message);
+    window.Android.postMessage(eventName, message);
+    window.Android.logoutCall( 'logout');
+
 }
 
 function webPageCallback(message) {
